@@ -56,7 +56,7 @@ export default function Home() {
         </div>
         <div css={{ 
           boxShadow: '-1px 2px 5px #0007',
-          borderRadius: '5px',
+          borderRadius: '12px',
           padding: '28px 31px'
         }}>
           <h2>Pod Online Status</h2>

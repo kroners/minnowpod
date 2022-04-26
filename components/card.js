@@ -4,7 +4,7 @@ function Card({ title, itemValue, bgColor, improvement }) {
   console.log({ title, itemValue, bgColor, improvement })
   return (
     <div css={{
-      borderRadius: '10px',
+      borderRadius: '12px',
       backgroundColor: bgColor,
       color: '#E2EAE8',
       display: 'flex',

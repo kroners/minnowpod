@@ -1,6 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import Link from "next/link"
+import Image from 'next/image'
 import { jsx, css } from '@emotion/react'
+
+const menuListItemStyle = css({
+  paddingLeft: '55px',
+
+  '&:before': {
+    content: "'■'",
+    paddingRight:'13px',
+    color: '#C4C4C4',
+    fontSize:'25px'
+  }
+});
 
 function Sidebar() {
   return (
@@ -12,39 +24,33 @@ function Sidebar() {
       width: '250px',
       textAlign: 'center',
     }}>
-      <div css={{
-      }}>
-        <img src="/minnow-logo.png" alt="Minnow Pod Logo" />
+      <div>
+        <Image src="/minnow-logo.png" alt="Minnow Pod Logo" width={138} height={48} />
       </div>
       <ul css={{
         flex: 1,
         margin: 0,
-        listStyleType: 'square',
-        listStylePosition: 'inside'
+        padding: '70px 0 0',
+        listStyle: 'none',
+        textAlign: 'left'
       }}>
-        <li css={{
-          paddingRight:'13px',
-          '&:before': {
-            color: 'red',
-            width: '28px'
-          }
-        }}>
+        <li css={menuListItemStyle}>
           <Link href="/">
-            <a>Home</a>
+            <a css={{ fontSize: '20px', color: '#006E7D', fontWeight: 600 }}>Home</a>
           </Link>
         </li>
-        <li>
+        <li css={menuListItemStyle}>
           <Link href="/report">
-            <a>Report</a>
+            <a css={{ fontSize: '20px', color: '#C2C2C2', fontWeight: 600 }}>Report</a>
           </Link>
         </li>
       </ul>
       <div css={{
         marginBottom: '10px'
       }}>
-          <Link href="/settings">
-            <a>Settings</a>
-          </Link>
+        <Link href="/settings">
+          <a css={{ fontSize: '20px', color: '#C2C2C2', fontWeight: 600 }}>Settings</a>
+        </Link>
       </div>
     </div>
   )

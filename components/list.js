@@ -24,6 +24,9 @@ function ListItem({ title, userList }) {
           console.log(user)
           return (<li key={user[0]} css={{
             padding: '12px 0 0',
+            lineHeight: 1,
+            fontWeigth: '500',
+
             '&:before': {
               content: '"•"',
               paddingRight:'10px',
